@@ -1,0 +1,10 @@
+services:
+  box:
+    build: .
+
+    # Keeps the container running for testing
+    tty: true
+    stdin_open: true
+
+    volumes:
+      - ./shared_data:/shared_data
