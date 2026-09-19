@@ -7,8 +7,11 @@ RUN apt update -y && apt install -y --no-install-recommends \
     bash cmake ninja-build clang lldb ccache git clangd \
     python3 python3-venv python3-pip python3-dev
 
+# fix colors
 ENV TERM=xterm-256color
 ENV COLORTERM=truecolor
+RUN sed -i 's/#force_color_prompt=yes/force_color_prompt=yes/' /etc/skel/.bashrc \
+    && sed -i 's/#force_color_prompt=yes/force_color_prompt=yes/' /root/.bashrc 2>/dev/null || true
 
 WORKDIR /root
 

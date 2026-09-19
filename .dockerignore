@@ -1,5 +1,4 @@
 .git
-src/.git
 src/build
 shared_data
 passed_solutions
