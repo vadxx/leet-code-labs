@@ -1,1 +1,4 @@
-shared_dir
+.git
+.vscode
+src/build
+shared_data

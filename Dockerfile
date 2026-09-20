@@ -4,7 +4,8 @@ FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update -y && apt install -y --no-install-recommends \
-    bash cmake ninja-build clang lldb ccache git clangd \
+    bash cmake ccache git \
+    ninja-build clang lldb clangd libclang-rt-dev \
     python3 python3-venv python3-pip python3-dev
 
 # fix colors
