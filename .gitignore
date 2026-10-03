@@ -1,4 +1,2 @@
-.git
 .vscode
-src/build
-shared_data
+build
