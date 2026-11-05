@@ -1,9 +1,7 @@
-#include <cstdio>
+#include "helpers.h"
 
 // #include <string>
 // #include <vector>
-
-// template <typename T> T &as_lvalue(T &&val) { return val; }
 
 // using std::string;
 // using std::vector;
@@ -23,5 +21,14 @@ public:
 
 int main() {
   Solution s;
-  printf("res: %f\n", /* s.func(as_lvalue<type>()) */); // expected value: n
+
+#define PRINT_CASE(NUM, ...)                                                   \
+  printf("[CASE " #NUM "]:\n");                                                \
+  print_vector(/* s.func(as_lvalue<type>(__VA_ARGS__))) */)
+
+  // Cases
+  PRINT_CASE(1, {/**/});  // expected value: N 
+  PRINT_CASE(2, {/**/});  // expected value: N
+
+#undef PRINT_CASE
 }
