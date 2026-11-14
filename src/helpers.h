@@ -1,6 +1,5 @@
 #pragma once
 
-#include <functional>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -13,10 +12,10 @@ struct ListNode {
   ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-inline ListNode *buildList(const std::vector<int> &v) {
+inline ListNode *buildList(const std::initializer_list<int> &list) {
   ListNode dummy(0);
   ListNode *tail = &dummy;
-  for (int x : v) {
+  for (int x : list) {
     tail->next = new ListNode(x);
     tail = tail->next;
   }
